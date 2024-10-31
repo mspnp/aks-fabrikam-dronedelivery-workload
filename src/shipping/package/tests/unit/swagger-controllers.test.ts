@@ -6,7 +6,7 @@
 const pkg = require('../../package.json');
 const supertest = require('supertest');
 
-import { KoaApp } from '../../app/app';
+import { KoaApp } from '../../app/app.js';
 
 const app = KoaApp.create('debug');
 

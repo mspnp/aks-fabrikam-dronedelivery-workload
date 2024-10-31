@@ -5,10 +5,7 @@
 
 import { Package } from '../../app/models/package';
 import { Repository } from '../../app/models/repository'
-const mdb = require('mongodb');
-const { ObjectID } = mdb;
-
-var MongoClient = require('mongodb').MongoClient;
+import { MongoClient } from 'mongodb';
 
 var assert = require('assert');
 
@@ -17,7 +14,6 @@ import 'mocha';
 describe('Repository', function() {
 
     var connectionUrl = 'mongodb://packagedb:27017/local';
-    var MongoClient = require('mongodb').MongoClient;
     var db:any;
     var repository = new Repository();
 

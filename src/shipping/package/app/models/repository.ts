@@ -3,13 +3,11 @@
 // Licensed under the MIT License (MIT). See License.txt in the repo root for license information.
 // ------------------------------------------------------------
 
-import { Package, PackageSize } from './package'
-import * as apiModels from './api-models'
-import { Settings } from '../util/settings';
-import * as Logger from '../util/logging';
-import { MongoErrors } from '../util/mongo-err';
-
-var MongoClient = require('mongodb').MongoClient;
+import { Package, PackageSize } from './package.js'
+import * as apiModels from './api-models.js'
+import { Settings } from '../util/settings.js';
+import { MongoErrors } from '../util/mongo-err.js';
+import { MongoClient } from 'mongodb';
 
 export enum UpsertStatus {
     Created = 1,

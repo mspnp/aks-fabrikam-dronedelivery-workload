@@ -3,9 +3,11 @@
 // Licensed under the MIT License (MIT). See License.txt in the repo root for license information.
 // ------------------------------------------------------------
 
-const Router = require('@koa/router');
+import Router from '@koa/router'; 
 
-import { PackageControllers, HealthzControllers, SwaggerControllers } from './controllers';
+import { SwaggerControllers } from './controllers/swagger-controllers.js';
+import {PackageControllers } from './controllers/package-controllers.js';
+import {HealthzControllers} from './controllers/healthz-controllers.js'
 
 export function apiRouter() {
 

@@ -5,13 +5,16 @@
 
   "compilerOptions": {
     "outDir": ".bin",
-    "module": "Node16",
-    "target": "es2022",
+    "module": "ESNext",
+    "target": "ES2020",
     "lib": ["ES2022"],
     "strict": true,
     "esModuleInterop": true,
     "skipLibCheck": true,
     "forceConsistentCasingInFileNames": true,
-    "moduleResolution": "Node16"
-  }
+    "moduleResolution": "node",
+    "typeRoots": ["./node_modules/@types"]    
+  },
+  "include": ["src/**/*.ts"],   // Ensure only TypeScript files in src are included
+  "exclude": ["node_modules"]
 }
