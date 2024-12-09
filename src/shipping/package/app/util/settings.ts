@@ -3,19 +3,19 @@
 // Licensed under the MIT License (MIT). See License.txt in the repo root for license information.
 // ------------------------------------------------------------
 
-const process = require("process")
+import process from 'process'
 
 export class Settings {
   static collectionName() : string {
-    return process.env["COLLECTION_NAME"]
+    return process.env["COLLECTION_NAME"] || 'defaultCollectionName';
   }
 
   static connectionString() : string {
-    return process.env["CONNECTION_STRING"]
+    return process.env["CONNECTION_STRING"] || 'defaultConectionString';
   }
 
   static containerName() : string {
-    return process.env["CONTAINER_NAME"]
+    return process.env["CONTAINER_NAME"] || 'defaultContainerName';
   }
 
   static logLevel() : string {

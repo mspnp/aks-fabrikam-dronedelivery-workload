@@ -1,4 +1,4 @@
-FROM node:19.9-alpine as base
+FROM node:23.1-alpine as base
 
 WORKDIR /app
 
@@ -24,8 +24,6 @@ RUN  npm run build
 
 # ---- runtime ----
 FROM base AS runtime
-
-MAINTAINER Fernando Antivero (https://github.com/ferantivero)
 
 WORKDIR /app
 COPY --from=dependencies /app/prod_node_modules ./node_modules
